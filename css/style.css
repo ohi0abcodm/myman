@@ -1,9 +1,13 @@
 /********** Template CSS **********/
-body {
-    overflow-y: scroll; /* Always show vertical scrollbar to prevent layout shifts */
+@media screen and (max-width: 1000px) {
+  /* CSS rules for screens up to 768px wide */
+  body {
+    overflow-y: scroll; /* Enable vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+  }
 }
+
 
 
 :root {
