@@ -32,32 +32,33 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 	<script>
-    $(document).ready(function() {
-      $('form').submit(function(event) {
-        event.preventDefault(); // Prevent form submission
+$(document).ready(function() {
+  $('form').submit(function(event) {
+    event.preventDefault(); // Prevent form submission
 
-        // Send the form data to FormSubmit using AJAX
-        $.ajax({
-          url: 'https://formspree.io/f/xbjnpbjy',
-          method: 'POST',
-          data: $('form').serialize(),
-          dataType: 'json',
-          success: function(response) {
-            // Redirect to reached.html upon successful submission
-            redirectToREACHED();
-          },
-          error: function(xhr, status, error) {
-            console.log(xhr.responseText);
-            alert('An error occurred. Please try again.');
-          }
-        });
-      });
+    // Send the form data to Formspree using AJAX
+    $.ajax({
+      url: 'https://formspree.io/f/xbjnpbjy',
+      method: 'POST',
+      data: $('form').serialize(),
+      dataType: 'json',
+      success: function(response) {
+        // Redirect to reached.html upon successful submission
+        redirectToREACHED();
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+        alert('An error occurred. Please try again.');
+      }
     });
+  });
+});
 
-    function redirectToREACHED() {
-      window.location.href = 'REACHED.html';
-    }
-  </script>
+function redirectToREACHED() {
+  window.location.href = 'REACHED.html';
+}
+</script>
+
   
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
