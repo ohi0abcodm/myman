@@ -1,4 +1,11 @@
 /********** Template CSS **********/
+body {
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent layout shifts */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+
+
 :root {
     --primary: #639d7d;
     --light: #ccecdb;
